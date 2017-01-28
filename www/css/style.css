@@ -1,0 +1,11 @@
+/* Empty. Add your own CSS if you like */
+.bigfont{
+	font-size:14px;
+}
+.smallfont{
+	font-size:12px;
+	margin-left:5px;
+}
+.pad_front{
+	padding-left:40px;
+}

@@ -1,0 +1,21 @@
+<ion-view view-title="Login" name="home-login">
+  <ion-content class="padding">
+    <form class="list list-inset" ng-submit="login()">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" required ng-model="user.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" required ng-model="user.password">
+        </label>
+        <input type="submit" value="Login" class="button button-block button-balanced">
+    </form>
+    <div class="row">
+      <div class="col text-center"><a ui-sref="forgot">Forgot Password?</a></div>
+    </div>
+    <div class="row">
+      <div class="col text-center"><a ui-sref="register">First Time? Register Here.</a></div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+<ion-view view-title="Forgot" name="home-forgot">
+  <ion-content class="padding">
+    <form class="list" ng-submit="checkuser()">
+        <div class="item item-input-inset">
+          <label class="item item-input-wrapper">
+            <input type="text" placeholder="Username" required ng-model="check.name">
+          </label>
+          <input type="submit" value="Check" class="button button-calm">
+        </div>
+    </form>
+    <form class="list" ng-submit="forgot()" ng-if="mainuser.username">
+      <label class="item item-input">
+        <span class="input-label">Username</span>
+        <input type="text" value="{{mainuser.username}}" readonly>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Description</span>
+        <input type="text" value="{{mainuser.descr}}" readonly>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Security Question</span>
+        <input type="text" value="{{mainuser.question}}" readonly>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Answer</span>
+        <input type="text" ng-model="mainuser.answer" required>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model="mainuser.password" required>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Confirm</span>
+        <input type="password" ng-model="mainuser.confirm" required>
+      </label>
+      <button class="button button-block button-balanced" type="submit">Submit</button>
+    </form>
+  </ion-content>
+</ion-view>

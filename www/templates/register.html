@@ -1,0 +1,49 @@
+<ion-view view-title="Register" name="home-register">
+  <ion-content class="padding">
+    <form class="list" ng-submit="checkuser()">
+        <div class="item item-input-inset">
+          <label class="item item-input-wrapper">
+            <input type="text" placeholder="Username" required ng-model="check.name">
+          </label>
+          <input type="submit" value="Check" class="button button-calm">
+        </div>
+    </form>
+    <form class="list" ng-submit="register()" ng-if="mainuser.username">
+      <label class="item item-input">
+        <span class="input-label">Username</span>
+        <input type="text" value="{{mainuser.username}}" readonly>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Description</span>
+        <input type="text" value="{{mainuser.descr}}" readonly>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" required ng-model="mainuser.password">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Confirm</span>
+        <input type="password" required ng-model="mainuser.confirm">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="email" required ng-model="mainuser.email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Phone</span>
+        <input type="text" required ng-model="mainuser.phone">
+      </label>
+      <label class="item item-input item-select">
+        <span class="input-label">Security Question</span>
+        <select ng-options="q.id as q.question for q in questions" required ng-model="mainuser.security">
+          <option value="">Select</option>
+        </select>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Answer</span>
+        <input type="text" required ng-model="mainuser.answer">
+      </label>
+      <button class="button button-block button-balanced" type="submit">Register</button>
+    </form>
+  </ion-content>
+</ion-view>
